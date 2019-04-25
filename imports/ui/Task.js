@@ -20,7 +20,6 @@ export default class Task extends Component {
   }
 
   render() {
-
     // Give tasks a different className when they are checked off,
     // so that we can style them nicely in CSS
     const taskClassName = classnames({
@@ -46,7 +45,6 @@ export default class Task extends Component {
             { this.props.task.private ? 'Private' : 'Public' }
           </button>
         ) : ''}
-
 
         <span className="text">
           <strong>{this.props.task.username}</strong>: {this.props.task.text}
