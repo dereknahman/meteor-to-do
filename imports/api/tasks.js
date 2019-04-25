@@ -35,6 +35,7 @@ Meteor.methods({
       username: Meteor.users.findOne(this.userId).username,
     });
   },
+
   'tasks.remove'(taskId) {
     check(taskId, String);
 
@@ -46,6 +47,7 @@ Meteor.methods({
 
     Tasks.remove(taskId);
   },
+
   'tasks.setChecked'(taskId, setChecked) {
     check(taskId, String);
     check(setChecked, Boolean);
@@ -55,7 +57,6 @@ Meteor.methods({
       // If the task is private, make sure only the owner can check it off
       throw new Meteor.Error('not-authorized');
     }
-
 
     Tasks.update(taskId, { $set: { checked: setChecked } });
   },

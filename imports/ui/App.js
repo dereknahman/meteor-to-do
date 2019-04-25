@@ -18,7 +18,6 @@ class App extends Component {
     };
   }
 
-
   handleSubmit(event) {
     event.preventDefault();
 
@@ -43,7 +42,6 @@ class App extends Component {
       hideCompleted: !this.state.hideCompleted,
     });
   }
-
 
   renderTasks() {
     let filteredTasks = this.props.tasks;
